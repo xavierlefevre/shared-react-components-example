@@ -1,0 +1,8 @@
+# tests: jest
+jest/tmp
+
+# bundles:
+bundle.*
+
+build/stats.*
+build/*.jpg

@@ -1,0 +1,17 @@
+# Ignore sources
+src
+jest
+build/stats.*
+
+# Ignore tooling
+.vscode
+.babelrc
+.eslintignore
+.eslintrc.js
+.flowconfig
+.nvmrc
+.prettierignore
+.prettierrc.js
+flowcoverage.json
+jest.config.js
+webpack.config.js

@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoadingIndicator /> should match snapshot 1`] = `
+.c0 {
+  position: relative;
+}
+
+.c0 .loader {
+  height: 70px;
+  width: 70px;
+  -webkit-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  transform: scale(0.6);
+  position: relative;
+}
+
+.c0 .loader-inner {
+  left: 25px;
+  top: 25px;
+}
+
+<div
+  className="c0"
+  color="#00965E"
+>
+  <div
+    className="loader loader-undefined loader-active"
+    style={undefined}
+  >
+    <div
+      className="loader-inner ball-spin-fade-loader"
+    >
+      <div
+        style={
+          Object {
+            "backgroundColor": "#00965E",
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "backgroundColor": "#00965E",
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "backgroundColor": "#00965E",
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "backgroundColor": "#00965E",
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "backgroundColor": "#00965E",
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "backgroundColor": "#00965E",
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "backgroundColor": "#00965E",
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "backgroundColor": "#00965E",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

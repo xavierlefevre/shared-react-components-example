@@ -1,0 +1,271 @@
+version: 2.0
+defaults: &defaults
+  working_directory: ~
+  docker:
+    - image: cypress/base:10
+
+jobs:
+  Build:
+    <<: *defaults
+    steps:
+      - run:
+          name: Add Verdaccio info to the npm config
+          command: |
+            echo -e '//{your verdaccio url}/:_authToken=${VERDACCIO_TOKEN}' >> ~/.npmrc
+            echo '@shared-components:registry={your verdaccio url}/' >> ~/.npmrc
+
+      - checkout
+      - run:
+          name: Try to merge our feature branch into develop
+          command: |
+            # Do nothing if we are on develop or master
+            if [ "${CIRCLE_BRANCH}" == "develop" ] || [ "${CIRCLE_BRANCH}" == "master" ]; then
+              echo "Merge skipped"
+              exit 0
+            fi
+
+            # Set git identity
+            git config --global user.email {email}
+            git config --global user.name {username}
+
+            # Try to merge, come back to current state if merge fails
+            git checkout -qf origin/develop
+            (git merge ${CIRCLE_BRANCH} --no-commit && git commit -m "Merge commit") || (git reset --hard && git checkout -qf ${CIRCLE_BRANCH})
+      - restore_cache:
+          keys:
+            # Restore cache when the yarn.lock did not change
+            # For now, we do not restore any cache if the yarn.lock changed
+            # We will see later if it can be useful as it can also come with
+            # some hard-to-debug side-effects
+            # https://circleci.com/docs/2.0/caching/#caching-strategy-tradeoffs
+            - yarn-{{ checksum "yarn.lock" }}
+      - run: yarn
+      - save_cache:
+          key: cypress-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/Cypress
+      - save_cache:
+          key: yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+            - packages/api-config/node_modules
+            - packages/entities/node_modules
+            - packages/fund-panorama/node_modules
+            - packages/fundsheet/node_modules
+            - packages/fundsheet-light/node_modules
+            - packages/language-provider/node_modules
+            - packages/share-comparator/node_modules
+            - packages/smartbot/node_modules
+            - packages/ui/node_modules
+            - packages/widgets/node_modules
+      - run:
+          name: Pokayoke - Check that yarn.lock is up-to-date
+          command: |
+            if [ -n "$(git status --porcelain)" ]; then
+                echo "Be careful, it seems you have not run yarn after you updated dependencies:";
+                git status --short
+                exit 1
+            fi
+      - run:
+          name: Pokayoke - If on master, check that CI branch is up-to-date
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ];
+            then ./scripts/checks/is_up_to_date_pokayoke.sh;
+            fi
+      - persist_to_workspace:
+          root: /root
+          paths:
+            - project
+  Flow, Prettier & Linter:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /root
+      - run:
+          name: Running flow, prettier and linter
+          command: yarn test:lint && yarn test:prettier && yarn test:flow
+  Jest:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /root
+      - run:
+          name: Running tests
+          command: yarn test:jest && yarn test:generator
+  Cypress E2E:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /root
+      - restore_cache:
+          key: cypress-{{ checksum "yarn.lock" }}
+      - run:
+          name: Running E2E tests
+          command: |
+            ## background your server
+            yarn start &
+            ## poll the server over and over again
+            ## until it's been booted
+            $(npm bin)/wait-on http-get://localhost:9001
+            ## and now run cypress
+            yarn test:e2e
+      - store_artifacts:
+          path: packages/fundsheet/cypress/videos
+      - store_artifacts:
+          path: packages/fundsheet/cypress/screenshots
+  Danger & Bundlesize:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /root
+      - run:
+          name: Running Danger
+          command: yarn danger ci
+      - run:
+          name: Build bundles
+          command: yarn build:preproduction && yarn build:production && yarn build:esm
+      - run:
+          name: Package size evaluation
+          command: yarn bundlesize
+      - persist_to_workspace:
+          root: /root
+          paths:
+            - project/packages/*/build
+  Build Storybook & DocZ:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /root
+      - run:
+          name: Avoid hosts unknown for github
+          command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+      - run:
+          name: Build Storybook & DocZ & Standalone
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "develop" ];
+              then ./scripts/publish/build-storybook-and-standalone.sh preprod;
+            elif [ "${CIRCLE_BRANCH}" == "master" ];
+              then ./scripts/publish/build-storybook-and-standalone.sh prod;
+            fi
+  Publish:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /root
+      - run:
+          name: Add Verdaccio info to the npm config
+          command: |
+            echo -e '//{your verdaccio url}/:_authToken=${VERDACCIO_TOKEN}' >> ~/.npmrc
+            echo '@shared-components:registry={your verdaccio url}/' >> ~/.npmrc
+      - run:
+          name: Avoid hosts unknown for github
+          command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+      - run:
+          name: Edit the git config
+          command: |
+            git config --global user.email {email}
+            git config --global user.name {username}
+      - run:
+          name: Pokayoke - If on master, check that CI branch is up-to-date to avoid version conflicts when 2 builds are running at the same time
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ];
+            then ./scripts/checks/is_up_to_date_pokayoke.sh;
+            fi
+      - run:
+          name: Publish packages on Verdaccio
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "develop" ];
+              then ./scripts/publish/publish-verdaccio-dev.sh;
+            elif [ "${CIRCLE_BRANCH}" == "master" ];
+              then ./scripts/publish/publish-verdaccio-prod.sh;
+            fi
+      - run:
+          name: Push package builds to Github
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "develop" ];
+              then ./scripts/publish/push-builds-to-github.sh dev;
+            elif [ "${CIRCLE_BRANCH}" == "master" ];
+              then ./scripts/publish/push-builds-to-github.sh prod;
+            fi
+      - run:
+          name: If on master, merge master in develop
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ];
+            then ./scripts/publish/merge-master-in-develop.sh;
+            fi
+  Look for outdated dependencies:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Evaluate dependencies
+          command: |
+            python scripts/indicators/dependencies.py
+      - store_artifacts:
+          path: dependencies.json
+      - store_artifacts:
+          path: dependencies.csv
+  Look for exported flow:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Evaluate exported flow types
+          command: |
+            python scripts/indicators/flow_exports.py
+      - store_artifacts:
+          path: flow_exports.json
+      - store_artifacts:
+          path: flow_exports.csv
+
+workflows:
+  version: 2
+  Speedy CI:
+    jobs:
+      - Build:
+          filters:
+            branches:
+              ignore:
+                - storybook-releases
+                - releases
+                - package-builds-dev
+                - package-builds-prod
+      - Danger & Bundlesize:
+          requires:
+            - Build
+      - Jest:
+          requires:
+            - Build
+      - Flow, Prettier & Linter:
+          requires:
+            - Build
+      - Cypress E2E:
+          requires:
+            - Build
+      - Build Storybook & DocZ:
+          requires:
+            - Jest
+            - Flow, Prettier & Linter
+            - Danger & Bundlesize
+          filters:
+            branches:
+              only: /^(develop|master)$/
+      - Publish:
+          requires:
+            - Jest
+            - Flow, Prettier & Linter
+            - Danger & Bundlesize
+          filters:
+            branches:
+              only: /^(develop|master)$/
+  Indicators:
+    jobs:
+      - Look for outdated dependencies
+      - Look for exported flow
+    triggers:
+      - schedule:
+          cron: '0 3 * * 1'
+          filters:
+            branches:
+              only:
+                - master

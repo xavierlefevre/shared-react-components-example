@@ -1,0 +1,9 @@
+# tests: jest
+jest/tmp
+
+# bundles:
+bundle.*
+
+# build
+build
+!build/index.js

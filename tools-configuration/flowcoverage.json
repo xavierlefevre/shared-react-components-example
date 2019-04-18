@@ -1,0 +1,7 @@
+{
+  "flowCommandPath": "./node_modules/.bin/flow",
+  "includeGlob": ["src/**/*.js"],
+  "excludeGlob": ["src/**/*.test.js", "src/**/*stories*.js"],
+  "threshold": 50,
+  "type": "text"
+}

@@ -1,0 +1,11 @@
+patch-package
+--- a/node_modules/immutable/dist/immutable.js.flow
++++ b/node_modules/immutable/dist/immutable.js.flow
+@@ -384,7 +384,6 @@ declare class Seq<K,V> extends _Iterable<K,V, typeof KeyedSeq, typeof IndexedSeq
+   static <K,V>(iter: { [key: K]: V }): KeyedSeq<K,V>;
+ 
+   static isSeq(maybeSeq: any): boolean;
+-  static of<T>(...values: T[]): IndexedSeq<T>;
+ 
+   size: ?number;
+   cacheResult(): this;

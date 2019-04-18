@@ -1,0 +1,28 @@
+declare type APINavSubscriptionResponseType = [
+  {
+    compartment_name: string,
+    currency: string,
+    dividend_policy: string,
+    fundshare_id: string,
+    id: string,
+    isin_code: string,
+    sending_frequency: string,
+    share_type: string,
+    subscriber: {
+      attachment_format: string,
+      cc: ?string,
+      country: string,
+      creation_date: string,
+      email: string,
+      id: number,
+      last_generation: string,
+      last_modification: string,
+      locale: string,
+      profile: string,
+      token: string,
+    },
+    subscription_date: string,
+    unsubscribed: boolean,
+  },
+  number,
+];

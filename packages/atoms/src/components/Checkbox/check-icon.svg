@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 10 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>check-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Parcours-de-versement" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3-Choix-de-mes-portefeuilles" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="Group-2">
+                <g id="tick">
+                    <path d="M9.25755037,0.15559216 C9.07446953,-0.0275069943 8.77764306,-0.0275069943 8.59452559,0.15559216 L2.97767792,5.77249477 L0.818653569,3.61347041 C0.635572729,3.43037126 0.338746255,3.43038957 0.155628787,3.61347041 C-0.0274703672,3.79655125 -0.0274703672,4.09337773 0.155628787,4.27647688 L2.64616553,6.766977 C2.82919143,6.95005784 3.12623767,6.94992964 3.30919031,6.766977 L9.25755037,0.818616942 C9.44064952,0.635536102 9.44063121,0.338691314 9.25755037,0.15559216 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,11 @@
+# tests: jest
+jest/tmp
+
+# bundles:
+bundle.*
+
+build/stats.*
+build/*.jpg
+
+# cypress
+cypress/videos

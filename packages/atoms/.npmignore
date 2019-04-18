@@ -1,0 +1,23 @@
+# Ignore sources
+src
+jest
+build/stats.*
+
+# Ignore external flow types
+flow-typed/npm
+
+# Ignore tooling
+.vscode
+.babelrc
+.eslintignore
+.eslintrc.js
+.flowconfig
+.nvmrc
+.prettierignore
+.prettierrc.js
+flowcoverage.json
+jest.config.js
+stylelint.config.js
+test-bundler.js
+webpack.config.js
+yarn-error.log

@@ -1,0 +1,27 @@
+# Dependency directories
+node_modules/
+
+# misc
+.DS_Store
+lerna-debug.log
+yarn-error.log
+.idea
+
+# build
+storybook-static
+bundle.*
+standalone.*
+packages/*/build/*.jpg
+packages/*/build/fonts/
+packages/*/build/prod/
+packages/*/build/preprod/
+packages/*/build/development/
+packages/fonts/
+packages/icons/
+
+# Scripts
+scripts/problem-solving/pdfs
+
+# DocZ
+.docz
+docz-static

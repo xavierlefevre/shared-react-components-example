@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should match snapshot for gradient button 1`] = `
+.c0 {
+  border: 1px solid #00965E;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 50px;
+  line-height: 17px;
+  color: #626262;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #00965E;
+  color: #FFFFFF;
+  width: 100%;
+}
+
+.c0:disabled {
+  background: #8ED0AF;
+  border-color: #8ED0AF;
+}
+
+<button
+  className="button c0"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+/>
+`;
+
+exports[`<Button /> should match snapshot for gradient button 2`] = `
+.c0 {
+  border: 1px solid #00965E;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 50px;
+  line-height: 17px;
+  color: #626262;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #00965E;
+  color: #FFFFFF;
+  width: 100%;
+}
+
+.c0:disabled {
+  background: #8ED0AF;
+  border-color: #8ED0AF;
+}
+
+<button
+  className="button c0"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+/>
+`;
+
+exports[`<Button /> should match snapshot for light button 1`] = `
+.c0 {
+  border: 1px solid #00965E;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 50px;
+  line-height: 17px;
+  color: #626262;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 300;
+  background-color: transparent;
+  color: #00965E;
+  width: 100%;
+}
+
+.c0:disabled {
+  background: #8ED0AF;
+  border-color: #8ED0AF;
+}
+
+<button
+  className="button c0"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+/>
+`;
+
+exports[`<Button /> should match snapshot for light button 2`] = `
+.c0 {
+  border: 1px solid #00965E;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 50px;
+  line-height: 17px;
+  color: #626262;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 300;
+  background-color: transparent;
+  color: #00965E;
+  width: 100%;
+}
+
+.c0:disabled {
+  background: #8ED0AF;
+  border-color: #8ED0AF;
+}
+
+<button
+  className="button c0"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+/>
+`;
+
+exports[`<Button /> should match snapshot for normal button 1`] = `
+.c0 {
+  border: 1px solid #00965E;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 50px;
+  line-height: 17px;
+  color: #626262;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #00965E;
+  color: #FFFFFF;
+  width: 100%;
+}
+
+.c0:disabled {
+  background: #8ED0AF;
+  border-color: #8ED0AF;
+}
+
+<button
+  className="button c0"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+/>
+`;
+
+exports[`<Button /> should match snapshot for normal button 2`] = `
+.c0 {
+  border: 1px solid #00965E;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 50px;
+  line-height: 17px;
+  color: #626262;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #00965E;
+  color: #FFFFFF;
+  width: 100%;
+}
+
+.c0:disabled {
+  background: #8ED0AF;
+  border-color: #8ED0AF;
+}
+
+<button
+  className="button c0"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+/>
+`;
+
+exports[`<Button /> should match snapshot for small button 1`] = `
+.c0 {
+  border: 1px solid #00965E;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 18px;
+  line-height: 17px;
+  color: #626262;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #00965E;
+  color: #FFFFFF;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.c0:disabled {
+  background: #8ED0AF;
+  border-color: #8ED0AF;
+}
+
+<button
+  className="button c0"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+/>
+`;
+
+exports[`<Button /> should match snapshot for small button 2`] = `
+.c0 {
+  border: 1px solid #00965E;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 18px;
+  line-height: 17px;
+  color: #626262;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #00965E;
+  color: #FFFFFF;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.c0:disabled {
+  background: #8ED0AF;
+  border-color: #8ED0AF;
+}
+
+<button
+  className="button c0"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+/>
+`;

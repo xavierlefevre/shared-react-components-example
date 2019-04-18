@@ -1,0 +1,6 @@
+# tests: jest
+jest/tmp
+
+# build:
+build
+!build/index.js

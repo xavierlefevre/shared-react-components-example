@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withDefaultTheme should return a component 1`] = `
+.c0 {
+  color: orange;
+  background-color: black;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`withDefaultTheme should return a component with the default theme 1`] = `
+.c0 {
+  color: red;
+  background-color: black;
+}
+
+<div
+  className="c0"
+/>
+`;

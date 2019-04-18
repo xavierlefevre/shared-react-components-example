@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> should match snapshot when checked 1`] = `
+.c1 {
+  border: 2px solid #626262;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #00965E;
+  background-image: url(IMAGE_MOCK);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  border-color: #00965E;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.c0 input[type='checkbox'] {
+  display: none;
+}
+
+<label
+  className="c0"
+  htmlFor="2"
+>
+  <input
+    checked={true}
+    disabled={false}
+    id="2"
+    onChange={[MockFunction]}
+    type="checkbox"
+  />
+  <span
+    checked={true}
+    className="c1"
+    disabled={false}
+  />
+</label>
+`;
+
+exports[`<Checkbox /> should match snapshot when disabled 1`] = `
+.c1 {
+  border: 2px solid #626262;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #bdc3c7;
+  border-color: #bdc3c7;
+  cursor: default;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.c0 input[type='checkbox'] {
+  display: none;
+}
+
+<label
+  className="c0"
+  htmlFor="3"
+>
+  <input
+    checked={false}
+    disabled={true}
+    id="3"
+    onChange={[MockFunction]}
+    type="checkbox"
+  />
+  <span
+    checked={false}
+    className="c1"
+    disabled={true}
+  />
+</label>
+`;
+
+exports[`<Checkbox /> should match snapshot when errored 1`] = `
+.c1 {
+  border: 2px solid #FF4348;
+  background-color: #FFF9F9;
+  cursor: pointer;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.c0 input[type='checkbox'] {
+  display: none;
+}
+
+<label
+  className="c0"
+  htmlFor="4"
+>
+  <input
+    checked={false}
+    disabled={false}
+    id="4"
+    onChange={[MockFunction]}
+    type="checkbox"
+  />
+  <span
+    checked={false}
+    className="c1"
+    disabled={false}
+  />
+</label>
+`;
+
+exports[`<Checkbox /> should match snapshot with label 1`] = `
+.c1 {
+  border: 2px solid #626262;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.c0 input[type='checkbox'] {
+  display: none;
+}
+
+.c2 {
+  margin-left: 10px;
+  pointer-events: none;
+}
+
+<label
+  className="c0"
+  htmlFor="1"
+>
+  <input
+    checked={false}
+    disabled={false}
+    id="1"
+    onChange={[MockFunction]}
+    type="checkbox"
+  />
+  <span
+    checked={false}
+    className="c1"
+    disabled={false}
+  />
+  <span
+    className="c2"
+  >
+    Label
+  </span>
+</label>
+`;

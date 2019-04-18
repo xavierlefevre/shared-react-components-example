@@ -1,0 +1,15 @@
+{
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "flow.enabled": true,
+  "flow.useNPMPackagedFlow": true,
+  "flow.runOnEdit": true,
+  "javascript.validate.enable": false,
+  "git.ignoreLimitWarning": true,
+  "prettier.stylelintIntegration": true,
+  "prettier.requireConfig": true,
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#2eb8b8",
+    "titleBar.activeForeground": "#051414"
+  }
+}

@@ -1,0 +1,27 @@
+const defaultPresets = [
+  [
+    '@babel/preset-env',
+    {
+      modules: ['esm'].includes(process.env.BABEL_ENV) ? false : 'auto',
+    },
+  ],
+];
+
+module.exports = {
+  presets: defaultPresets.concat(['@babel/preset-react', '@babel/preset-flow']),
+  plugins: [
+    '@babel/plugin-proposal-class-properties',
+    '@babel/plugin-proposal-export-default-from',
+    '@babel/plugin-proposal-export-namespace-from',
+    '@babel/plugin-proposal-function-bind',
+    '@babel/plugin-transform-flow-strip-types',
+    [
+      'module-resolver',
+      {
+        alias: {
+          '^shared-components-atoms(.+)': './src\\1',
+        },
+      },
+    ],
+  ],
+};

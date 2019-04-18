@@ -1,0 +1,40 @@
+{
+	"folders": [
+		{
+			"path": "packages/ui"
+		},
+		{
+			"path": "packages/api-config"
+		},
+		{
+			"path": "packages/entities"
+		},
+		{
+			"path": "packages/fund-panorama"
+		},
+		{
+			"path": "packages/fundsheet"
+		},
+		{
+			"path": "packages/fundsheet-light"
+		},
+		{
+			"path": "packages/language-provider"
+		},
+		{
+			"path": "packages/share-comparator"
+		},
+		{
+			"path": "packages/smartbot"
+		},
+		{
+			"path": "packages/widgets"
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"titleBar.activeBackground": "#2eb8b8",
+			"titleBar.activeForeground": "#051414"
+		}
+	}
+}

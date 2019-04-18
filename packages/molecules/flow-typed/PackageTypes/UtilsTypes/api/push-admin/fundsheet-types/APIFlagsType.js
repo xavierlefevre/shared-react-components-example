@@ -1,0 +1,16 @@
+declare type FlagsType = {
+  delegated_flag: ?boolean,
+  strategy_flag: ?boolean,
+  guaranteed_flag: ?boolean,
+  eif_flag: ?boolean,
+  etf_flag: ?boolean,
+  abs_return_flag: ?boolean,
+  indexed_fund_flag: ?boolean,
+  protected_flag: ?boolean,
+  sharia_flag: ?boolean,
+  pea_flag: ?boolean,
+  lfe_insurance_flag: ?boolean,
+  fof_flag: ?boolean,
+  srd_flag: ?boolean,
+  sri_flag: ?boolean,
+};

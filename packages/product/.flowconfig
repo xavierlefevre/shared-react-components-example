@@ -1,0 +1,18 @@
+[ignore]
+.*/atoms/src/.*
+.*/molecules/src/.*
+
+[include]
+
+[libs]
+flow-typed
+../../tools-configuration/global-flow
+
+[options]
+module.name_mapper='shared-components-product' -> '<PROJECT_ROOT>/src'
+include_warnings=true
+emoji=true
+server.max_workers=4
+
+[version]
+0.89.0
