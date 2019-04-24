@@ -1,57 +1,81 @@
-# Shared components ⚙️
+# ⚙ Shared Components
 
-**Discover how we organised our project of shared React components!**
+## 🔍 Discover how we organised our project of shared React components!
 
-> In this repository you will find a working example of a mono-repo of React components libraries.
-> 
-> "Shared components" purpose is to share any size of components between apps.
-> 
-> We want to give enough tips to reassure you in making a similar choice for your company, if needs be.
+If your objective is to share any size of components between several web applications, **you are in the right place**.
 
-*You can copy paste and reuse this project as is, if you'd like*
+> In this repository you will find a working example of a mono-repository of React components libraries.
+>
+> We hope to give you detailed tips to make you accelerate if you are working on a similar project.
+>
+> You can also copy paste this project entirely to reuse it as is.
 
 ## Key learnings!
 
-### **1. Have a mono-repository**
-Split your responsibilities and domains in different packages, but have them all in one place for a smoother developer experience.
+### **1. 🧐 Use a mono-repository**
 
-### **2. Design your components following "Atomic Design"**
-An atom is a very small dumb and highly reusable component, while an organism is a full grown one-page business connected feature.
+Split your responsibilities and domains in different packages, but have them all in one place for a smoother developer experience. We use [Lerna](https://github.com/lerna/lerna) for managing our mono-repo.
 
-### **3. Centralise your components in one Showroom: Storybook**
-We use Storybook to develop and showcase our components! One central and unbiased place, forcing to thing reusability.
+### **2. ⚛️ Follow "Atomic Design" principles**
 
-### **4. Beware breaking changes**
-Use automatic versionning, changelogs and type systems to prevent messy bugs because of not anticipated breaking changes.
+An atom is a very small dumb and highly reusable component, while an organism is a full grown one-page business connected feature. It all comes from [Brad Frost Atomic Design principles](http://bradfrost.com/blog/post/atomic-web-design/). Find [here](documentation/technical-standards/architecture.md) our own implementation.
 
-### **5. Define your customisation strategy**
-We used Styled Components themes and an additionnal service of ours to define how our components can be customised.
+### **3. 🎪 Display it all in one Showroom: Storybook**
 
-### **6. Make your packages light**
-With Tree Shaking, your users will just bundle what they need.
+We use Storybook to develop and showcase our components! One central and unbiased place, forcing any contributor to always think reusability. To try it, [install the project](documentation/how-to-use/1-installation.md) and run `yarn start`.
 
-### **7. Control what components or features might enter your project**
-Developing on "Shared components" is heavier than on a normal project, hence taking the decision to create a new component should be well thought. We recommend to plan at least 3 reuses of the component to make it worthwile.
+### **4. 🔨 Beware breaking changes**
 
-### **8. Our feature branch Git flow**
-All feature branches start from Master. PRs are first merged on Develop. Then on Master.
-Every time, we merge Master in Develop to keep them aligned.
+Use automatic versionning, changelogs and type systems to prevent messy bugs because of unanticipated breaking changes.
 
-### **9. Regularly update your dependencies**
+### **5. 💄 Define your customisation strategy**
+
+We used Styled Components themes and an additionnal service of ours to define how our components can be customised. [Find here more details](documentation/development/how-to-style-a-component.md).
+
+### **6. 🌬 Make your packages light**
+
+With Tree Shaking, your users will just bundle what they need. You can find out how we did it by looking at the atoms package: its [package.json](packages/atoms/package.json), [babel.config.js](packages/atoms/babel.config.js) and [deployAssets.sh](packages/atoms/deployAssets.sh).
+
+### **7. 👮‍ Control what components and features enter the repo**
+
+Developing on "Shared components" is heavier than on a normal project, hence taking the decision to create a new component should be well thought. We recommend to plan at least 3 reuses of the component to make it worthwile. Here is [our decision tree](documentation/how-to-contribute/1-decision-making.md) to help us make that decision.
+
+### **8. 🛣 Define a strict feature branch Git flow**
+
+For us, all feature branches start from Master. PRs are first merged on Develop. Then on Master.
+Regularly, we automatically merge Master in Develop to keep them aligned.
+
+### **9. 🧹 Regularly update your dependencies**
+
 More than any other project, "Shared components" has to be aligned with the latest standards, as new projects might launch and need to be compatible with it.
 
-### **10. Dedicate a core team**
+### **10. 👩‍💻👨‍💻 Dedicate a core team**
+
 Just as an open source project, have a dedicated tech/business team focused on making "Shared components" a success
 
-### **11. Ease the Yarn Link pain**
-If you want to locally test your component on your host project, you'll have to use "Yarn Link", we learned how to compose with it.
+### **11. 🔗 Ease the Yarn Link pain**
 
-## Our stack
-*Lerna, React, Storybook, ...*
+If you want to locally test your component on your host project, you'll have to use "Yarn Link", we learned how [to deal with it](documentation/how-to-contribute/4.1-yarn-link.md).
+
+## Project Documentation
+
+> The full project documentation is [here](project-documentation.md)
+
+If you want to launch Storybook locally, go through the [installation steps](documentation/how-to-contribute/2-getting-started.md)
+
+## Our Stack
 
 ![stack flow](documentation/presentation/stack-flow.png)
 ![stack list](documentation/presentation/stack-list.png)
 
 ## Contributors
 
-*TBD*
+_To finish_
+
+- Aurélien Le Masson
+- Michel Parreno
+- Hugo Lime
+- Justine Mignot
+- Surya Ambrose
+- Ivan Poiraudeau
+- Xavier Lefèvre
