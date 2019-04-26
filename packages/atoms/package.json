@@ -1,7 +1,7 @@
 {
   "name": "@shared-components/atoms",
   "version": "18.9.2",
-  "description": "Shared Components - UI",
+  "description": "Shared Components - Atoms",
   "main": "build",
   "module": "build/esm/index.js",
   "sideEffects": [
@@ -18,22 +18,19 @@
     }
   ],
   "scripts": {
-    "build": "yarn build:development && yarn build:preproduction && yarn build:production && yarn build:esm",
-    "build:analyze": "cross-env NODE_ENV=production APP_ENV=production webpack-cli --json > build/stats.production.json && webpack-bundle-analyzer build/stats.production.json",
-    "build:development": "cross-env NODE_ENV=development APP_ENV=development webpack-cli",
-    "build:esm": "cross-env NODE_ENV=production BABEL_ENV=esm babel ./src --out-dir ./build/esm --ignore \"**/*.test.js\" --ignore \"**/test.js\" --ignore \"**/__mocks__\" && ./deployAssets.sh",
-    "build:preproduction": "cross-env NODE_ENV=production APP_ENV=preproduction webpack-cli",
+    "build": "yarn build:development && yarn build:production && yarn build:esm",
+    "build:analyze": "cross-env NODE_ENV=production webpack-cli --json > build/stats.production.json && webpack-bundle-analyzer build/stats.production.json",
+    "build:development": "cross-env NODE_ENV=development webpack-cli",
+    "build:esm": "cross-env BABEL_ENV=esm babel ./src --out-dir ./build/esm --ignore \"**/*.test.js\" --ignore \"**/test.js\" --ignore \"**/__mocks__\" && ./deployAssets.sh",
     "build:production": "cross-env NODE_ENV=production APP_ENV=production webpack-cli",
-    "build:watch": "cross-env NODE_ENV=development APP_ENV=development webpack-cli -w",
-    "bundlesize": "bundlesize",
-    "test": "cross-env APP_ENV=development yarn test:jest && yarn flow check && yarn test:prettier && yarn test:lint",
+    "build:watch": "cross-env NODE_ENV=development webpack-cli -w",
+    "test": "yarn test:jest && yarn test:flow && yarn test:prettier && yarn test:lint && yarn test:style",
     "test:flow": "flow check",
     "test:jest": "jest --runInBand --no-cache --config=jest.config.js 2>&1",
     "test:lint": "eslint . --quiet",
     "test:prettier": "prettier-check \"**/*.js\"",
     "test:style": "stylelint **/*.style.js **/style.js",
-    "coverage:unit": "jest --coverage",
-    "coverage:flow": "flow-coverage-report --config \"./flowcoverage.json\""
+    "coverage:unit": "jest --coverage"
   },
   "dependencies": {
     "immutable": "^3.8.2",
