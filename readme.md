@@ -34,7 +34,7 @@ We used Styled Components themes and an additionnal service of ours to define ho
 
 ### **6. 🌬 Make your packages light**
 
-With Tree Shaking, your users will just bundle what they need. You can find out how we did it by looking at the atoms package: its [package.json](packages/atoms/package.json), [babel.config.js](packages/atoms/babel.config.js) and [deployAssets.sh](packages/atoms/deployAssets.sh).
+By building your packages as [ES6 modules](http://exploringjs.com/es6/ch_modules.html), your users will just bundle what they need. You can [find out how we did here](documentation/6-make-light-packages.md)
 
 ### **7. 👮‍ Control what components and features enter the repo**
 
