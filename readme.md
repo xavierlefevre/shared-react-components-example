@@ -62,16 +62,19 @@ Just as an open source project, have a dedicated tech/business team focused on m
 
 If you want to locally test your component on your host project, you'll have to use "Yarn Link", we learned how [to deal with it](documentation/how-to-contribute/4.1-yarn-link.md).
 <br />
+<br />
 
 ## Locally start the project
 
 If you want to launch Storybook locally, you follow the [installation steps here](documentation/how-to-contribute/2-getting-started.md)!
+<br />
 <br />
 
 ## Our Stack
 
 ![stack flow](documentation/presentation/stack-flow.png)
 ![stack list](documentation/presentation/stack-list.png)
+<br />
 <br />
 
 ## Contributors
