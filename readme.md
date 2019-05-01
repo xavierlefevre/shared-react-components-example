@@ -9,7 +9,8 @@ If your objective is to share any size of components between several web applica
 > We hope to give you detailed tips to make you accelerate if you are working on a similar project.
 >
 > You can also copy paste this project entirely to reuse it as is.
-> <br />
+
+<br />
 
 ## Key learnings!
 
