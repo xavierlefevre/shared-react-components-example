@@ -16,10 +16,8 @@
 - Clone the project:
 
   ```bash
-  git clone git@github.com:shared-components/shared-components.git
+  git clone git@github.com:shared-components/project-example.git shared-components
   ```
-
-> Ask for repository rights if you need them.
 
 - Make sure you use the correct version of Node,
 
@@ -28,7 +26,7 @@
   nvm use
   ```
 
-- Download SharedComponents dependenciess:
+- Download Shared Components dependencies:
   ```bash
   yarn
   ```
@@ -36,7 +34,7 @@
 ## Launch storybook
 
 ```bash
-  yarn storybook
+yarn storybook
 ```
 
-You can then see storybook at http://localhost:9001/
+You can then see Storybook at http://localhost:9001/
