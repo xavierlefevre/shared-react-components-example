@@ -23,7 +23,7 @@ An atom is a very small dumb and highly reusable component, while an organism is
 
 ### **3. 🎪 Display it all in one unique showroom: Storybook**
 
-We use [Storybook](https://storybook.js.org/) to develop and showcase our components! One central and unbiased place, forcing any contributor to always think reusability. To try it, [install the project](documentation/how-to-use/1-installation.md) and run `yarn start`.
+We use [Storybook](https://storybook.js.org/) to develop and showcase our components! One central and unbiased place, forcing any contributor to always think reusability. To try it, [install the project](documentation/how-to-contribute/2-getting-started.md) and run `yarn start`.
 
 ### **4. 🔨 Simplify your packages versioning and beware of breaking changes**
 
