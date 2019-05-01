@@ -78,6 +78,5 @@ If you want to launch Storybook locally, you follow the [installation steps here
 
 ## Powered by
 
-BNPP AM ![BNPP AM Logo](documentation/presentation/bnppam-logo.png =250x)
-
-<img src="documentation/presentation/bnppam-logo.png" alt="drawing" width="200"/>
+| <img src="documentation/presentation/bnppam-logo.png" width="250px;"/><br /><sub><b>BNPP AM</b></sub><br /> | <img src="documentation/presentation/theodo-logo.png" width="120px;"/><br /><sub><b>Theodo</b></sub><br /> |
+| :---------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
