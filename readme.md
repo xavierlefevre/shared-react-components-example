@@ -9,7 +9,7 @@ If your objective is to share any size of components between several web applica
 > We hope to give you detailed tips to make you accelerate if you are working on a similar project.
 >
 > You can also copy paste this project entirely to reuse it as is.
-<br />
+> <br />
 
 ## Key learnings!
 
@@ -19,7 +19,7 @@ Split your responsibilities and domains in different packages, but have them all
 
 ### **2. ⚛️ Follow "Atomic Design" principles**
 
-An atom is a very small dumb and highly reusable component, while an organism is a full grown one-page business connected feature. It all comes from [Brad Frost Atomic Design principles](http://bradfrost.com/blog/post/atomic-web-design/). Find [here](documentation/technical-standards/architecture.md) our own implementation.
+An atom is a very small dumb and highly reusable component, while an organism is a full grown one-page business connected feature. It all comes from [Brad Frost Atomic Design principles](http://bradfrost.com/blog/post/atomic-web-design/). You can find diagrams of the project architecture [here](documentation/technical-standards/architecture.md).
 
 ### **3. 🎪 Display it all in one unique showroom: Storybook**
 
@@ -95,3 +95,4 @@ If you want to launch Storybook locally, you follow the [installation steps here
 
 | <img src="documentation/presentation/bnppam-logo.png" width="250px;"/><br /><sub><b>BNPP AM</b></sub><br /> | <img src="documentation/presentation/theodo-logo.png" width="120px;"/><br /><sub><b>Theodo</b></sub><br /> |
 | :---------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
+

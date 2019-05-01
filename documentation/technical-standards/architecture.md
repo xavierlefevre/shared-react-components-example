@@ -1,12 +1,8 @@
-# [Standard] Architecture
+# Architecture
 
-## What does it mean?
+## What do we mean by architecture?
 
-By architecture we mean:
-
-- the folders, files and code organisation
-- the stored data organisation (e.g. Redux)
-- the chosen vocabulary
+The organisation, communication, responsibilities and chosen vocabulary for the `packages > folders > files > code`.
 
 ## Why should I pay attention to my project architecture?
 
@@ -16,48 +12,31 @@ Our aim when architecturing is to:
 - make developers and domain experts communicate with the same language
 - organise the project in a way that concerns and responsibilities are clearly defined, hence if a new feature is developed, the developer will easily find where to add it
 
-A good architecture illustrated by a diagram is also an excellent way of explaining your project to people outside of the development team!
+An architecture illustrated by diagrams is also an excellent way of explaining your project to people outside of the development team!
 
-## What is a good architecture on Shared Components?
+## The chosen architecture
 
-We have two levels of architecture:
+We followed [Brad Frost Atomic Design principles](http://bradfrost.com/blog/post/atomic-web-design/) to architecture the project.
 
-- The global packages organisation
-- The typical widgets and products internal architecture
+> Find below two levels of zoom:
 
-The two below diagrams define the standard architecture for both levels on SharedComponents:
+### **Large Zoom**: The global packages organisation
 
-![shared-components-architecture.png](shared-components-architecture.png)
-![react-redux-architecture.png](react-redux-architecture.png)
+<p align="center">
+  <b>Example of components scope and how they fit together!</b>
+  <br/>
+  <img src="result-example.png" height="535px;"/>
+  <br/>
+  <br/>
+  <b>Each rectangle is a package</b>
+  <br/>
+  <img src="global-organisation.png" height="450px;"/>
+</p>
 
-## What is the indicator to make sure this standard stays green?
+### **Closer Zoom**: Internals of typical packages and their APIs
 
-| Packages                           | 30/10/2018                                                  | Last update KO reason                                                                                                                                                                                                                       |
-| ---------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SharedComponents Generator:package | ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) KO | Doesn't export the Redux store by default                                                                                                                                                                                                   |
-| API-Config                         | ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) OK |
-| Entities                           | ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) KO | Doesn't match the latest architecture choice: having entities split by most related product. Example: fund data is mostly related to fundsheet hence a developer will naturaly get the Redux store for a fund through the fundsheet package |
-| Fundsheet                          | ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) KO | Doesn't export the Redux store by default                                                                                                                                                                                                   |
-| Fundsheet Light                    | ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) KO | We don't know what is the target architecture of this package                                                                                                                                                                               |
-| Language Provider                  | ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) OK |
-| Share Comparator                   | ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) KO | We don't know what is the target architecture of this package                                                                                                                                                                               |
-| Smartbot                           | ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) KO | We don't know what is the target architecture of this package                                                                                                                                                                               |
-| UI                                 | ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) KO | UI has Redux as a dependency                                                                                                                                                                                                                |
-| Widgets                            | ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) OK |
-
-
-### How to style your components in Shared Components
-
-- Use [styled-components](https://www.styled-components.com/) and do not use classNames.
-
-### How to handle your component state? Local or with a context?
-
-If there are more than 5 subcomponents and more than 2 levels of depth :
-
-- Add a Context Provider in the top level component to share its state
-- Add a Context consumer in every subcomponent needing data from the top-level's state
-- Replace all selectors with direct API calls
-
-If there are less than 5 subcomponents or only 1 level of depth :
-
-- Use callback function to share data between components
+<p align="center">
+  <b>The biggest rectangles represent a package in order to see their internals!</b>
+  <br/>
+  <img src="react-redux-architecture.png" width="600px;"/>
+</p>
