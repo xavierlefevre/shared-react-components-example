@@ -70,7 +70,7 @@ If you want to launch Storybook locally, you follow the [installation steps here
 <br />
 <br />
 
-## Our Stack
+## The stack
 
 ![stack flow](documentation/presentation/stack-flow.png)
 ![stack list](documentation/presentation/stack-list.png)
