@@ -77,6 +77,14 @@ If you want to launch Storybook locally, you follow the [installation steps here
 <br />
 <br />
 
+## Roadmap
+
+- [ ] Finish the MVP: main readme + global article + basic Storybook running locally
+- [ ] Share on the web to see if it interests people
+- [ ] Have an up and running project with working CI and hosted Storybook
+- [ ] Deep dive on key learnings with further articles and project improvement
+- [ ] Update of the repository basis to make it a boilerplate
+
 ## Contributors
 
 |   [<img src="https://avatars0.githubusercontent.com/u/25685118?s=400&v=4" width="100px;"/><br /><sub><b>Aurélien Le Masson</b></sub>](https://github.com/Ojisama)<br />    | [<img src="https://avatars0.githubusercontent.com/u/9078109?s=400&v=4" width="100px;"/><br /><sub><b>Michel Parreno</b></sub>](https://github.com/michel-p)<br /> | [<img src="https://avatars1.githubusercontent.com/u/15966838?s=400&v=4" width="100px;"/><br /><sub><b>Hugo Lime</b></sub>](https://github.com/HugoLime)<br /> | [<img src="https://avatars3.githubusercontent.com/u/33832992?s=400&v=4" width="100px;"/><br /><sub><b>Justine Mignot</b></sub>](https://github.com/justinemignot)<br /> | [<img src="https://avatars1.githubusercontent.com/u/8100843?s=400&v=4" width="100px;"/><br /><sub><b>Surya Ambrose</b></sub>](https://github.com/suryaambrose)<br /> | [<img src="https://avatars3.githubusercontent.com/u/15523557?s=400&v=4" width="100px;"/><br /><sub><b>Ivan Poiraudeau</b></sub>](https://github.com/ivanosevitch)<br /> | [<img src="https://avatars2.githubusercontent.com/u/14938214?s=460&v=4" width="100px;"/><br /><sub><b>Xavier Lefèvre</b></sub>](https://github.com/xavierlefevre)<br /> |
