@@ -2,7 +2,7 @@
 
 ## 🔍 Discover how we organised our project of shared React components!
 
-If your objective is to share any size of components between several web applications, **you are in the right place**.
+If your objective is to share components of any size between several web applications, **you are in the right place**.
 
 > In this repository you will find a working example of a mono-repository of React components libraries.
 >
@@ -57,7 +57,7 @@ More than any other project, "Shared components" has to be aligned with the late
 
 ### **11. 👩‍💻👨‍💻 Dedicate a core team**
 
-Just as an open source project, have a dedicated tech/business team focused on making "Shared components" a success
+Just as an open source project, have a dedicated tech and business team focused on making "Shared components" a success. Without a core team, you won't have the focus and ownership necessary to handle such a project, hence the complexity and debt will accumulate and your developers will end up losing more time than winning, in the long run. We will be more specific in a dedicated article later on.
 
 ### **12. 🔗 Ease the Yarn Link pain**
 
