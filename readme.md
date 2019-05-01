@@ -9,6 +9,7 @@ If your objective is to share any size of components between several web applica
 > We hope to give you detailed tips to make you accelerate if you are working on a similar project.
 >
 > You can also copy paste this project entirely to reuse it as is.
+<br />
 
 ## Key learnings!
 
@@ -60,15 +61,18 @@ Just as an open source project, have a dedicated tech/business team focused on m
 ### **12. 🔗 Ease the Yarn Link pain**
 
 If you want to locally test your component on your host project, you'll have to use "Yarn Link", we learned how [to deal with it](documentation/how-to-contribute/4.1-yarn-link.md).
+<br />
 
 ## Locally start the project
 
 If you want to launch Storybook locally, you follow the [installation steps here](documentation/how-to-contribute/2-getting-started.md)!
+<br />
 
 ## Our Stack
 
 ![stack flow](documentation/presentation/stack-flow.png)
 ![stack list](documentation/presentation/stack-list.png)
+<br />
 
 ## Contributors
 
