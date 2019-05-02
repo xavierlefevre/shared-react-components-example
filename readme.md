@@ -28,7 +28,7 @@ We use [Storybook](https://storybook.js.org/) to develop and showcase our compon
 
 ### **4. 🔨 Simplify your packages versioning and beware of breaking changes**
 
-Use automatic versionning, changelogs and type systems to prevent messy bugs because of unanticipated breaking changes.
+Use automatic versionning ([commitizen](http://commitizen.github.io/cz-cli/)), changelogs and type systems ([Flow](https://flow.org/) or [TypeScript](https://www.typescriptlang.org/)) to prevent messy bugs because of unanticipated breaking changes.
 
 ### **5. 🏭 Create new components/libraries with a "generator"**
 
