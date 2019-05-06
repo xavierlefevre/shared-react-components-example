@@ -51,7 +51,7 @@ Developing on "Shared components" is heavier than on a normal project, hence tak
 For us, all feature branches start from Master. PRs are first merged on Develop. Then on Master.
 Regularly, we automatically merge Master in Develop to keep them aligned.
 
-### **10. 🧹 Regularly update your dependencies**
+### **10. ♻️ Regularly update your dependencies**
 
 More than any other project, "Shared components" has to be aligned with the latest standards, as new projects might launch and need to be compatible with it.
 
