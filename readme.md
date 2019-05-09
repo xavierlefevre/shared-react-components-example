@@ -94,6 +94,9 @@ If you want to launch Storybook locally, you follow the [installation steps here
 
 ## Powered by
 
-| <img src="documentation/presentation/theodo-logo.png" width="120px;"/><br /><sub><b>Theodo</b></sub><br /> |
+| [<img src="documentation/presentation/theodo-logo.png" width="120px;"/><br /><sub><b>Theodo</b></sub><br />](https://www.theodo.fr) |
 | :--------------------------------------------------------------------------------------------------------: |
 
+## License
+
+Shared Components is [MIT licensed](LICENSE.md).
