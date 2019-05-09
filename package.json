@@ -82,6 +82,7 @@
     "prettier": "^1.15.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.2",
+    "react-markdown": "^4.0.8",
     "stats-webpack-plugin": "^0.6.2",
     "style-loader": "^0.21.0",
     "styled-components": "4.1.1",

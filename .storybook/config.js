@@ -20,6 +20,9 @@ function importAll(req) {
 function loadStories() {
   let req;
 
+  req = require.context(`.`, true, /.stories.js$/);
+  importAll(req);
+
   req = require.context(`../packages/product/src`, true, /.stories.js$/);
   importAll(req);
 
