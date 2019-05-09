@@ -2,7 +2,7 @@ const defaultPresets = [
   [
     '@babel/preset-env',
     {
-      modules: process.env.BABEL_ENV == 'esm' ? false : 'auto',
+      modules: process.env.BABEL_ENV === 'esm' ? false : 'auto',
     },
   ],
 ];
