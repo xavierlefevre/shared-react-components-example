@@ -1,4 +1,4 @@
-# ⚙ Shared Components
+# ⚙ Shared React Components Example
 
 ## 🔍 Discover how we organised our project of shared React components!
 
