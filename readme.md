@@ -1,12 +1,10 @@
 # ⚙ Shared React Components Example
 
-## 🔍 Discover how we shared React components between several web applications!
-
 This repository hosts an example of a **mono-repository of shared React components, organised in different libraries**.
 
-**Its aim is to**:
-- Give you specific tips to make you accelerate
-- Be a boilerplate: You can copy paste the repo entirely to reuse it as is
+🔍 Discover how we shared React components between several web applications:
+- Specific tips to make you accelerate
+- A boilerplate: You can copy paste the repo entirely to reuse it as is
 
 <br />
 
