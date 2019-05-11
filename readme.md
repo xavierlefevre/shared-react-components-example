@@ -14,9 +14,9 @@ If your objective is to share components of any size between several web applica
 
 ## Key learnings!
 
-### **0. ⁉️ Should I develop such a project?**
+### **0. ⁉️ Should you develop such a project?**
 
-From our experience, we proved in which condition it is valuable to share components between apps: [find out with this article](https://medium.com/theodo/when-and-how-to-share-ui-components-between-apps-a44a44382de1).
+From our experience, we proved in which condition it is valuable to share components between apps: [find out more with this article](https://medium.com/theodo/when-and-how-to-share-ui-components-between-apps-a44a44382de1).
 
 ### **1. 🧐 Use a mono-repository**
 
