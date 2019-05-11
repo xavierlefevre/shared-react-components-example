@@ -4,11 +4,11 @@
 
 If your objective is to share components of any size between several web applications, **you are in the right place**.
 
-> In this repository you will find a working example of a mono-repository of React components libraries.
->
-> We hope to give you detailed tips to make you accelerate if you are working on a similar project.
->
-> You can also copy paste this project entirely to reuse it as is.
+This repository hosts an example of a **mono-repository of shared React components, organised in different libraries**.
+
+**Its aim is to**:
+- Give you specific tips to make you accelerate
+- Be a boilerplate: You can copy paste the repo entirely to reuse it as is
 
 <br />
 
