@@ -1,8 +1,6 @@
 # ⚙ Shared React Components Example
 
-## 🔍 Discover how we organised our project of shared React components!
-
-If your objective is to share components of any size between several web applications, **you are in the right place**.
+## 🔍 Discover how we shared React components between several web applications!
 
 This repository hosts an example of a **mono-repository of shared React components, organised in different libraries**.
 
