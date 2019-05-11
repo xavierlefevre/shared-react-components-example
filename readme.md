@@ -84,8 +84,8 @@ If you want to launch Storybook locally, you follow the [installation steps here
 
 ## Roadmap
 
-- [ ] Finish the MVP: main readme + global article + basic Storybook running locally
-- [ ] Share on the web to see if it interests people
+- [x] Finish the MVP: main readme + global article + basic Storybook running locally
+- [x] Share online to see if it interests people
 - [ ] Have an up and running project with working CI and hosted Storybook
 - [ ] Deep dive on key learnings with further articles and project improvement
 - [ ] Update of the repository basis to make it a boilerplate
