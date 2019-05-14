@@ -1,14 +1,5 @@
 # Recommended setup
 
-## VS Code plugins
-
-- We strongly advise you to use a prettier plugin for your IDE. For VSCode, we recommend [Prettier code formatter](https://github.com/prettier/prettier-vscode)
-- Code linter [eslint](https://github.com/Microsoft/vscode-eslint)
-- Style linter [stylelint](https://github.com/shinnn/vscode-stylelint)
-- Typing [Flow](https://github.com/flowtype/flow-for-vscode) _([How to use & export SharedComponents Flow Types](./flow-types.md))_
-- Versionning tool [Git lens](https://github.com/eamodio/vscode-gitlens)
-- Package update tool : [Version Lens](https://github.com/vscode-contrib/vscode-versionlens)
-
 ## Pretty Pull Request
 
 Use [Pretty Pull Request](https://github.com/williamdclt/git-pretty-pull-request) to create new pull request and ensure the right format.
