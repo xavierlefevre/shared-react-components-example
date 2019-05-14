@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "jpoissonnier.vscode-styled-components",
+    "shinnn.stylelint",
+    "flowtype.flow-for-vscode",
+    "eamodio.gitlens",
+    "pflannery.vscode-versionlens"
+  ]
+}
