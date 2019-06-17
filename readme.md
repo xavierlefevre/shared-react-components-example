@@ -1,10 +1,10 @@
-# ⚙ Shared React Components Example
+# ⚙ Shared Components: Project example of shared React components
 
-This repository hosts an example of a **mono-repository of shared React components, organised in different libraries**.
+⚠️ This repository is a pure example, not a boilerplate (as we did not update its dependencies in a while)
 
-🔍 Discover how we shared React components between several web applications:
+🔍 Here you'll discover:
 - [Specific tips to make you accelerate](https://github.com/shared-components/shared-react-components-example#key-learnings)
-- [A boilerplate: You can copy paste the repo entirely to reuse it as is](https://github.com/shared-components/shared-react-components-example#locally-start-the-project)
+- [A playground: You can copy paste the repo entirely to reuse it as is](https://github.com/shared-components/shared-react-components-example#locally-start-the-project)
 
 <br />
 
@@ -67,7 +67,7 @@ If you want to locally test your component on your host project, you'll have to 
 
 ## Locally start the project
 
-If you want to launch Storybook locally, you follow the [installation steps here](documentation/how-to-contribute/2-getting-started.md)!
+If you want to try the project out and at first launch the local Storybook: follow the [installation steps here](documentation/how-to-contribute/2-getting-started.md)!
 <br />
 <br />
 
