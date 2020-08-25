@@ -44,7 +44,7 @@
     "superagent": "^4.0.0"
   },
   "peerDependencies": {
-    "highcharts": "^6.1.0",
+    "highcharts": "^8.2.0",
     "react": "^16.4.0",
     "react-intl": "^2.4.0",
     "react-redux": "^5.1.1",
@@ -86,7 +86,7 @@
     "file-loader": "^1.1.11",
     "flow-bin": "0.89.0",
     "flow-coverage-report": "^0.5.0",
-    "highcharts": "^6.1.0",
+    "highcharts": "^8.2.0",
     "immutable": "^3.8.2",
     "jest": "^23.6.0",
     "jest-styled-components": "6.3.1",
